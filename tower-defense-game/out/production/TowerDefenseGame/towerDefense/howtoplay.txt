@@ -1,0 +1,4 @@
+Hey everyone this how you play the game!
+
+The object of the game is to prevent the student(Justin) from reaching Jeff at the base. Build towers close to the path
+to shoot down the student before it reaches Jeff.

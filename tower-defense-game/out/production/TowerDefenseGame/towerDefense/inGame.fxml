@@ -1,0 +1,43 @@
+<!-- inGame.fxml
+    By: Anmol Raina, Justin Lim, Ben Weiss
+
+    This file dictates the style and appearance of our inGame screen where
+    our actual game takes place.
+-->
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import towerDefense.InGameView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<!--Create GridPane and instantiate a new Controller-->
+<GridPane fx:controller="towerDefense.InGamePresenter"
+          xmlns:fx="http://javafx.com/fxml"
+          alignment="center"
+          hgap="10"
+          vgap="10">
+    <!-- Give ability to use coordinates to locate objects -->
+    <Pane prefHeight="1000" prefWidth="1000">
+        <!--Creates the labels so we can output relevant text-->
+        <Label layoutX="100" layoutY="10" text= "Life Points: 100" fx:id="lifePointsLabel"/>
+        <Label layoutX="5" layoutY="50" text = "Money: 200" fx:id="moneyLabel"/>
+        <Label layoutX="5" layoutY="130" text= "Wave: 0" fx:id="waveLabel"/>
+        <Label layoutX="100" layoutY="50" text= "Score: 0" fx:id="scoreLabel"/>
+
+        <!-- Creates the different buttons we can see on the screen. Also assigns them actions.-->
+        <Button layoutX="5" layoutY="160" text = "Start Wave" onAction="#onStartWave"/>
+        <Button layoutX="0" layoutY="0" text = "Main Menu" onAction="#switchToMainMenu"/>
+        <Button layoutX="5" layoutY="70" text = "Build New Tower" onAction="#onBuildTower"/>
+
+        <!--Creates different groups for ouw various classes in view. Each group refers to a structure we draw on the
+        screen-->
+        <InGameView fx:id="backgroundTiles"/>
+        <InGameView fx:id="pathTiles"/>
+        <InGameView fx:id="towerTiles"/>
+        <InGameView fx:id="inGameView"/>
+        <InGameView fx:id="studentsGroup"/>
+        <InGameView fx:id="base"/>
+        <InGameView fx:id="laserGroup"/>
+    </Pane>
+</GridPane>
